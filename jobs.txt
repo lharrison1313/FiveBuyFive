@@ -1,2 +1,4 @@
-30 8 * * 1-5 cd /home/finger/FiveBuyFive/ && /home/finger/.nvm/versions/node/v16.13.1/bin/node jobs.js open > /home/finger/logs.txt
-30 9 * * 1-5 /home/finger/.nvm/versions/node/v16.13.1/bin/node /home/finger/FiveBuyFive/jobs.js close
+#open FiveBuyFive poll
+30 8 * * 1-5 cd /home/finger/FiveBuyFive/ && /home/finger/.nvm/versions/node/v16.13.1/bin/node jobs.js open >> /home/finger/fbf-logs/fbf.log
+#close FiveBuYFive poll
+30 9 * * 1-5 cd /home/finger/FiveBuyFive/ && /home/finger/.nvm/versions/node/v16.13.1/bin/node jobs.js close >> /home/finger/fbf-logs/fbf.log
