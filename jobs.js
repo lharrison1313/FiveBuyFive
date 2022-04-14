@@ -26,7 +26,7 @@ async function createPoll() {
     });
     //picking 5 random tickers
     let randomTickers = [];
-    for (i = 0; i <= 5; i++) {
+    for (i = 0; i < 5; i++) {
       let index = Math.floor(Math.random() * (tickers.length - 1));
       randomTickers.push(tickers[index].symbol);
     }
