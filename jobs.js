@@ -9,7 +9,7 @@ const alpaca = new Alpaca({
   secretKey: process.env.PAPER_SECRET_KEY,
   paper: true,
 });
-const FRACTIONAL_PRICE = 1;
+const FRACTIONAL_PRICE = 1000;
 const args = process.argv;
 // to get group id use this below and set bot privacy
 // bot.hears("hello", (ctx) => {
