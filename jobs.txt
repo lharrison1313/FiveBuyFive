@@ -1,2 +1,2 @@
-30 8 * * 1-5 jobs.js open
-30 9 * * 1-5 jobs.js close
+30 8 * * 1-5 /home/finger/.nvm/versions/node/v16.13.1/bin/node /home/finger/FiveBuyFive/jobs.js open > /home/finger/logs.txt
+30 9 * * 1-5 /home/finger/.nvm/versions/node/v16.13.1/bin/node /home/finger/FiveBuyFive/jobs.js close

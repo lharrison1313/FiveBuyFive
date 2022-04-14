@@ -35,7 +35,7 @@ async function createPoll() {
       "The stock market is about to open! You have 1 hour to choose todays stock pick.",
       randomTickers
     );
-    fs.writeFileSync("poll.txt", String(poll.message_id));
+    fs.writeFileSync("./poll.txt", String(poll.message_id));
     bot.stop();
   } catch (error) {
     console.log(error);
@@ -46,7 +46,7 @@ async function closePoll() {
   try {
     bot.launch();
     //stopping poll
-    let pollID = Number(fs.readFileSync("poll.txt", "utf-8"));
+    let pollID = Number(fs.readFileSync("./poll.txt", "utf-8"));
     let poll = await bot.telegram.stopPoll(process.env.TELEGRAM_GROUP_ID, pollID);
     //calculating winner
     let winner = poll.options.reduce((prev, current) => {
