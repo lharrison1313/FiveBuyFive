@@ -1,0 +1,17 @@
+{
+  "name": "five-by-five",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alpacahq/alpaca-trade-api": "^2.13.0",
+    "dotenv": "^16.0.0",
+    "ftp": "^0.3.10",
+    "telegraf": "^4.7.0"
+  }
+}
