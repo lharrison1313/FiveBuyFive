@@ -33,7 +33,7 @@ async function createPoll() {
     //sending poll
     let poll = await bot.telegram.sendPoll(
       process.env.TELEGRAM_GROUP_ID,
-      "The stock market is about to open! You have 1 hour to choose todays stock pick.",
+      "Get ready to pick some stocks! You have until the stock market opens tomorrow to vote on a stock.",
       randomTickers
     );
     fs.writeFileSync("./poll.txt", String(poll.message_id));
@@ -60,7 +60,7 @@ async function closePoll() {
       notional: FRACTIONAL_PRICE,
       side: "buy",
       type: "market",
-      time_in_force: "day",
+      time_in_force: "gtc",
     });
     console.log("Order Placed: ", order);
     //sending winner message
