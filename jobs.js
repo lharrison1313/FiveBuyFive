@@ -37,6 +37,7 @@ async function createPoll() {
     );
     fs.writeFileSync("./poll.txt", String(poll.message_id));
     bot.stop();
+    console.log("poll opened successfully");
   } catch (error) {
     console.log(error);
   }
@@ -67,6 +68,7 @@ async function closePoll() {
       `Congratulations ${winner.text} is the winner! A market order for $${FRACTIONAL_PRICE} worth of ${winner.text} has been placed.`
     );
     bot.stop();
+    console.log("poll closed successfully");
   } catch (error) {
     console.log(error);
   }
