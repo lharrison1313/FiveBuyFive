@@ -60,7 +60,7 @@ async function closePoll() {
       notional: FRACTIONAL_PRICE,
       side: "buy",
       type: "market",
-      time_in_force: "gtc",
+      time_in_force: "day",
     });
     console.log("Order Placed: ", order);
     //sending winner message
