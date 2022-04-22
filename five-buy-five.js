@@ -28,9 +28,11 @@ async function getPositions(ctx) {
     });
     let totalPL = (portfolio.equity.at(-1) - portfolio.equity[0]) / portfolio.equity[0];
     let formattedPositions = "Here Are Our Positions:\n";
-    formattedPositions = formattedPositions.concat("-------------------------------------\n");
-    formattedPositions = formattedPositions.concat(`Total P/L: ${Number(totalPL).toFixed(4)}\n`);
-    formattedPositions = formattedPositions.concat("-------------------------------------\n");
+    formattedPositions = formattedPositions.concat("-----------------------------------------------\n");
+    formattedPositions = formattedPositions.concat(
+      `Total P/L: $${Number(portfolio.equity.at(-1)).toFixed(2)} (${Number(totalPL).toFixed(4)})\n`
+    );
+    formattedPositions = formattedPositions.concat("-----------------------------------------------\n");
     positions.forEach((position) => {
       formattedPositions = formattedPositions.concat(
         `${position.symbol}: ${Number(position.market_value).toFixed(2)} (${Number(
