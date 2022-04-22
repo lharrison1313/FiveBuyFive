@@ -35,7 +35,7 @@ async function getPositions(ctx) {
     formattedPositions = formattedPositions.concat("-----------------------------------------------\n");
     positions.forEach((position) => {
       formattedPositions = formattedPositions.concat(
-        `${position.symbol}: ${Number(position.market_value).toFixed(2)} (${Number(
+        `${position.symbol}: $${Number(position.market_value).toFixed(2)} (${Number(
           position.unrealized_intraday_plpc
         ).toFixed(2)})\n`
       );
