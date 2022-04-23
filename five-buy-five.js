@@ -80,6 +80,7 @@ async function getMovers(direction) {
   positions.sort((posA, posB) => posA.unrealized_intraday_plpc - posB.unrealized_intraday_plpc);
   if (direction === "winners" || direction === "both") {
     let winners = positions.slice(positions.length - 5, positions.length);
+    winners.reverse();
     formattedPositions = formattedPositions.concat("-----------------------------------------------\n");
     formattedPositions = formattedPositions.concat("Today's Winners\n");
     formattedPositions = formattedPositions.concat("-----------------------------------------------\n");
