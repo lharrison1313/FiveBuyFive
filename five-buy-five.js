@@ -79,7 +79,7 @@ async function getMovers(direction) {
   if (positions.length < 5) return "There are not enough assets to determine movers";
   positions.sort((posA, posB) => posA.unrealized_intraday_plpc - posB.unrealized_intraday_plpc);
   if (direction === "winners" || direction === "both") {
-    let winners = positions.slice(positions.length - 4, positions.length);
+    let winners = positions.slice(positions.length - 5, positions.length);
     formattedPositions = formattedPositions.concat("-----------------------------------------------\n");
     formattedPositions = formattedPositions.concat("Today's Winners\n");
     formattedPositions = formattedPositions.concat("-----------------------------------------------\n");
